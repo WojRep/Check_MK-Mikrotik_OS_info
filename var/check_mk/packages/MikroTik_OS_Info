@@ -1,5 +1,5 @@
 {'author': u'Wojciech Repiński',
- 'description': 'CheckMK plugin for monitoring the parameters of RouterOS and hardware inventory ',
+ 'description': 'MikroTik - CheckMK plugin for monitoring the parameters of RouterOS and hardware inventory ',
  'download_url': 'https://github.com/WojRep/Check_MK-Mikrotik_OS_info',
  'files': {'agent_based': [],
            'agents': [],
@@ -16,8 +16,8 @@
            'pnp-templates': [],
            'web': []},
  'name': 'MikroTik_OS_Info',
- 'title': 'CheckMK plugin for monitoring the parameters of RouterOS and hardware inventory ',
- 'version': '2.0.0',
+ 'title': 'MikroTik - CheckMK plugin for monitoring the parameters of RouterOS and hardware inventory ',
+ 'version': '2.0.1',
  'version.min_required': '2.0.0p18',
  'version.packaged': '2.0.0p18',
  'version.usable_until': '2.0.999'}
