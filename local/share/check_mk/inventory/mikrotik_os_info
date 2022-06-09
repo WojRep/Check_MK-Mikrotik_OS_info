@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+# -*- encoding: utf-8; py-indent-offset: 4 -*-
+
+def inv_snmp_mikrotik_crs(info):
+    routeros, routerosfw, roslevel, softid, serial, mac = info[0]
+    node = inv_tree("hardware.system.")
+
+    macs = ""
+    for mac1 in mac:
+        mac2 = hex(mac1).split('x')[-1]
+        mac3 = str(mac2)
+        if (len(mac3) % 2):
+            mac3 = '0' + mac3
+        if (len(macs) < 2):
+            macs += mac3
+        else:
+            macs += ':'
+            macs += mac3
+
+    node["Serial"] = serial
+    node["RouterOS_version"] = routeros
+    node["RouterOS_firmware"] = routerosfw
+    node["RouterOS_Software_ID"] = softid
+    node["RouterOS_level"] = roslevel
+    node["MAC"] = macs
+    return node
+
+
+inv_info['mikrotik_crs'] = {
+    'inv_function': inv_snmp_mikrotik_crs,
+}
